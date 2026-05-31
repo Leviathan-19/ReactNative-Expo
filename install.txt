@@ -1,0 +1,55 @@
+1.- Primero necesito neter instalado Node.js
+En caso de que no lo tengamos instalado, podemos ir a https://nodejs.org/es/download
+e instalarlo para el sistema operativo correspondiente, despues
+podemos verificar si la instalación fue exitosa mediante los comandos en cmd:
+node -v
+npm -v
+En mi caso tengo las versiones:
+C:\Users\ASUS-GAMING>node -v
+v24.14.1
+C:\Users\ASUS-GAMING>npm -v
+11.11.0
+2.- Tambien necesitaremos instalar git en caso de que no lo tengamos instalado:
+https://git-scm.com/install/
+y para verificar la instalación, usaremos el comando
+git --version
+en mi caso tengo la version:
+C:\Users\ASUS-GAMING>git --version
+git version 2.53.0.windows.2
+
+3.- Despues iniciamos nuestro editor de codigo, en mi caso yo voy a usar Visual Studio Code
+Existen algunas extensiones para visual que deberiamos de instalar para facilitar nuestro desarrollo como:
+- ES7+ React/Redux snippets
+- React Native Tools
+- Prettier
+- Material Icon Theme
+- Error Lens
+
+4.- Ahora vamos a instalar Expo, antes se debia instalar Expo CLI, mediante:
+npm install -g expo-cli
+Pero ahora se puede hacer mediante el comando:
+npx create-expo-app@latest
+En mi caso ejecute el comando para crear el proyecto directamente, el cual me crea la siguiente estructura
+
+npx create-expo-app@latest ReactNativeWithExpo
+
+Dejamos que cree los ficheros e instale las dependencias,
+nos va a pedir que le demos enter para aceptar proseguir con la instalación
+y finalmente cuando acabe ingresamos a nuestro proyecto y ejecutamos el comando:
+npx expo start
+
+despues de ejecutarse te dará un QR por consola el cual se puede scanear,
+mediante el aplicativo movil "Expo Go", en Google Play, sin embargo despues de intentar escanear el QR
+con el aplicativo movil me dió error, revisando comentarios de la aplicación, pude verificar que la app es v54
+y la instalación latest de mi proyecto es v56, y lo confirmé ya que dentro del aplicativo en settings,
+habia:
+- Client version 54.0.8
+- Supported SDK 54
+
+Por lo cual tuve que hacer un downgrade a la v54, mediante el comando:
+npx expo install expo@~54.0.0
+despues para corregir dependencias use el comando:
+npx expo install --fix
+para corroborar la version, se puede usar el comando:
+npx expo --version
+lo cual me devolvio : 54.0.25
