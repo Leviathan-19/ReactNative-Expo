@@ -52,4 +52,5 @@ despues para corregir dependencias use el comando:
 npx expo install --fix
 para corroborar la version, se puede usar el comando:
 npx expo --version
-lo cual me devolvio : 54.0.25
+
+Despues de ello ya se puede escanear mediante el aplicativo movil e interconectarlo
